@@ -100,9 +100,7 @@ def translate_dataset_via_cloud_translate(
 
     for split in splits:
         split_time = time.time()
-        num_rows = 10
-        ds = Dataset.from_dict(dataset[split][:num_rows]) 
-        # ds = dataset[split]
+        ds = dataset[split]
         print(f"[{split}] {len(ds):}")
 
         ## extract options from "choices" column for mmlu
