@@ -52,7 +52,7 @@ def cloud_translate(example: Dict[str, str],
                             mime_type="text/plain"
                 )
                 example[key] = [translation.translated_text for translation in results.translations]
-                print("results:", example[key])
+                # print("results:", example[key])
                 time.sleep(random.uniform(0.8, 1.5))
         except Exception as e:
             print(e)
